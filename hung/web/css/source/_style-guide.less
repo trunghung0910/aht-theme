@@ -1,0 +1,305 @@
+& when(@media-common = true) {
+    /* Default Style */
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+    
+    .col {
+        width: 100%;
+        padding-left: @layout-indent__width;
+        padding-right: @layout-indent__width;
+        box-sizing: border-box;
+    }
+    
+    .style-guide-header {
+        background: @color-red14;
+    }
+    
+    .style-guide-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+    
+        .style-guide-logo {
+            padding-right: 47px;
+        }
+        
+        .title-style-guide {
+            padding-left: 47px;
+            font-size: 30px;
+            font-family: @font-medium-roboto;
+            color: @color-white;
+            margin-bottom: 10px;
+        }
+    }
+    
+    
+    
+    .style-guide-text {
+        font-size: 30px;
+        color: @color-gray-darken5;
+        font-family: @font-regular-lora;
+        margin-top: 70px;
+        margin-bottom: 28px;
+    }
+    
+    /* Button */
+    
+    .btn-button {    
+        .action.primary {
+            text-transform: uppercase;
+            padding: 13px 35px;
+            border-radius: 0;
+        }
+    
+        .action.secondary {
+            text-transform: uppercase;
+            padding: 14px 48px;
+            border-radius: 0;
+        }
+    }
+    
+    /* Checkbox */
+    
+    .style-guide-checkbox div{
+        display: flex;
+        align-items: center;
+    }
+    
+    .style-guide-radio div {
+        display: flex;
+        align-items: center;
+    }
+    
+    .style-guide-inputs {
+        display: flex;
+    
+        .style-guide-checkbox {
+            margin-right: 50px;
+        }
+    }
+    
+    input[type="checkbox"] {
+        top: 0;
+        appearance: none;
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        background-color: @color-white;
+        border: 1px solid @color-gray-darken6;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+    }
+    
+    input[type="checkbox"]::after {
+        font-family: "Font Awesome 5 Free";
+        content: '\f00c';
+        font-weight: 900;
+        color: @color-black;
+        font-size: 9px;
+        display: none;
+    }
+    input[type="checkbox"]:checked::after {
+        display: block;
+    }
+    
+    label {
+        font-size: 13px;
+        line-height: 30px;
+        color: @color-black;
+        font-family: @font-regular-roboto;
+        cursor: pointer;
+    }
+    
+    /* Radio */
+    input[type="radio"] {
+        display: none;
+    }
+    
+    input[type="radio"] {
+        top: 0;
+        appearance: none;
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        background-color: @color-white;
+        border: 1px solid @color-gray-darken6;
+        border-radius: 50%;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    
+    input[type="radio"]::after {
+        font-family: "Font Awesome 5 Free";
+        content: '\f111';
+        font-weight: 900;
+        color: @color-black;
+        font-size: 9px;
+        display: none;
+    }
+    
+    input[type="radio"]:checked::after {
+        display: block;
+    }
+    
+    /* End Radio */
+    
+    /* Input Fields */
+    
+    .sg-input-field {
+        width: 320px;
+        margin-bottom: 10px;
+    }
+    
+    .input-text.mage-error {
+        color: @color-black;
+    }
+    
+    /* End Input Fields */
+    
+    /* Mage Error */
+    
+    .mage-error {
+        color: @color-red13;
+        font-size: 13px;
+        font-family: @font-regular-roboto;
+    }
+    
+    /* End Mage Error */
+    
+    /* Alert */
+        
+    .message {
+        text-align: center;
+    }
+    
+    /* End Alert */
+    
+    /* Typography */
+    
+    p {
+        @_font-size: 13px;
+        @_font-family: @font-regular-opensan;
+        @_line-height: 20px;
+        color: @color-black;
+    }
+    
+    .style-guide-paragraph {
+        margin-bottom: 27px;
+    }
+    
+    .style-guide-links {
+        margin-bottom: 50px;
+    }
+    
+    /* End Typography */
+    
+    /* Icon */
+    
+    .style-guide-icons {
+        display: flex;
+    }
+    
+    .minicart-wrapper {
+        margin-left: 0;
+        margin-right: 14px;
+    
+        a i {
+            color: @color-gray-light7;
+            font-size: 18px;
+    
+            &:hover {
+                color: @color-black;
+            }
+        }
+    }
+    
+    .social {
+        display: flex;
+        
+        a i {
+            color: @color-gray-light7;
+            font-size: 18px;
+            padding: 0 14px;
+    
+            &:hover {
+                color: @color-black;
+            }
+        }
+    }
+    
+    /* End Icon */
+    
+    /* CMS Block */
+    
+    .style-guide-promo {
+        margin-top: 38px;
+    
+        .row {
+            margin-left: -10px;
+            margin-right:  -10px;
+        }
+        
+        .col {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    
+    .block-promo {
+        display: block;
+        position: relative;
+    
+        img {
+            width: 100%;
+            display: block;
+        }  
+        
+        .block-promo-item {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .link-promo {
+            display: block;            
+            background-color: @color-button-primary;
+            color: @color-white;
+            font-size: 15px;
+            padding: 18px 22px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: @font-roboto-bold;
+            border: 2px solid @color-white;
+    
+            &:hover {
+                background-color: @color-gray-darken8;
+            }
+    
+            i {
+                margin-left: 5px;
+            }
+        }
+    }
+    
+    /* End CMS Block */
+}
+
+
+

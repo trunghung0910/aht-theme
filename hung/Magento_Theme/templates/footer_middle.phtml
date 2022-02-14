@@ -1,0 +1,43 @@
+<div class="footer-categories footer-mid">
+    <?php
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('footer-middle-categories')
+        ->toHtml();
+    ?>
+</div>
+
+<div class="footer-why-burning footer-mid">
+    <?php
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('footer-middle-why-burning')
+        ->toHtml();
+    ?>
+</div>
+
+<div class="footer-our-policies footer-mid">
+    <?php
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('footer-middle-our-policies')
+        ->toHtml();
+    ?>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>

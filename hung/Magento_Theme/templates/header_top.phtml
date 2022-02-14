@@ -1,0 +1,39 @@
+<!-- Desktop -->
+<div class="header-top-desktop-left">
+    <?php
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('header-top-left-contact-phone')
+        ->toHtml();   
+    ?>
+</div>
+
+<div class="header-top-desktop-center">
+    <?php
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('header-top-center-links')
+        ->toHtml();   
+    ?>
+</div>
+<!-- End Desktop -->
+
+<!-- Mobile -->
+<div class="header-mobile-top-left">
+    <?php
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('header-mobile-top-left')
+        ->toHtml();
+    ?>
+</div>
+
+<div class="header-mobile-top-right">
+    <?php
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('header-mobile-top-right')
+        ->toHtml();
+    ?>
+</div>
+<!-- End Mobile -->

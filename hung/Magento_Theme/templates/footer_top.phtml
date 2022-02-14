@@ -1,0 +1,28 @@
+<div class="footer-top-showroom">
+    <?php
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('footer-top-showroom')
+        ->toHtml();
+    ?>
+</div>
+
+<div class="footer-top-banner">
+    <?php
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('footer-top-banner')
+        ->toHtml();
+    ?>
+</div>
+
+<div class="footer-top-about">
+    <div class="footer-top-about-inner">
+    <?php
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('footer-top-about')
+        ->toHtml();
+    ?>
+    </div>
+</div>

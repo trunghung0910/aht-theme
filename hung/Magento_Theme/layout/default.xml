@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <body>
+        <!-- Remove Element -->
+        <referenceBlock name="register-link" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="copyright" remove="true"/>     
+        <!-- End Remove Element -->
+
+        <!-- Header -->
+        <referenceContainer name="header.panel">
+            <block class="Magento\Framework\View\Element\Template" name="header.top" before="-" template="Magento_Theme::header_top.phtml" />       
+        </referenceContainer>
+        <referenceBlock name="header.links">
+            <block class="Magento\Framework\View\Element\Template" name="header.top.social" before="-" template="Magento_Theme::header_top_social.phtml" />       
+        </referenceBlock>        
+        <!-- End Header -->        
+
+        <!-- Footer -->
+        <referenceContainer name="footer-container">
+            <container name="footer.top" htmlTag="div" htmlClass="footer-about" before="footer">
+                <block class="Magento\Framework\View\Element\Template" name="footer-top-content" template="Magento_Theme::footer_top.phtml" />
+            </container>
+        </referenceContainer>
+        <referenceContainer name="footer">
+            <container name="footer.content.mid"  htmlTag="div"  htmlClass="footer-content-mid">
+                <block class="Magento\Framework\View\Element\Template" name="footer-middle-content"  template="Magento_Theme::footer_middle.phtml" />
+            </container>
+            <container name="footer.bottom" htmlTag="div" htmlClass="footer-bottom" >
+                <block class="Magento\Framework\View\Element\Template" name="footer-bottom-content" template="Magento_Theme::footer_bottom.phtml" />
+            </container>
+        </referenceContainer>
+        <!-- End Footer -->
+
+        <!-- Move subcribe -->
+        <move element="form.subscribe" destination="footer.content.mid" after="-"/>
+    </body>
+</page>
